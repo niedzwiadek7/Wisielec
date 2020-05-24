@@ -1,0 +1,15 @@
+
+.icon-heart:before { content: '\e800'; } /* '' */
+.icon-ok-circled:before { content: '\e801'; } /* '' */
+.icon-trophy:before { content: '\e802'; } /* '' */
+.icon-help-circled:before { content: '\e803'; } /* '' */
+.icon-plus-circled:before { content: '\e804'; } /* '' */
+.icon-emo-beer:before { content: '\e80b'; } /* '' */
+.icon-emo-shoot:before { content: '\e810'; } /* '' */
+.icon-crown-plus:before { content: '\e845'; } /* '' */
+.icon-crown-minus:before { content: '\e846'; } /* '' */
+.icon-heart-broken:before { content: '\f028'; } /* '' */
+.icon-smile:before { content: '\f118'; } /* '' */
+.icon-frown:before { content: '\f119'; } /* '' */
+.icon-user-plus:before { content: '\f234'; } /* '' */
+.icon-user-times:before { content: '\f235'; } /* '' */
