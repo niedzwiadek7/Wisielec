@@ -39,7 +39,7 @@
             <div id="alfabet">
                 Tak jest! Podano prawidłowe hasło! <br /> <br /> 
                 <span class="reset" onclick="przekieruj('gra.php')"> JESZCZE RAZ? </span> <br /> 
-                <span class="toindex" onclick="przekieruj('/../index.php')"> PRZEJDŹ DO MENU </span>
+                <span class="toindex" onclick="przekieruj('../index.php')"> PRZEJDŹ DO MENU </span>
             </div>
             <div style="clear: both;"> </div>
         </div>

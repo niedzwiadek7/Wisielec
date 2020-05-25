@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    //test $_SESSION['pytanie'] = "hasło";
     require_once("losuj.php");
 ?>
 
