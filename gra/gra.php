@@ -17,7 +17,13 @@
         <script src="../wymagany.js"> </script>
         <script>
             haslo = <?='"'.$_SESSION['pytanie'].'"'?> ; 
-            <?php if (isset($_SESSION['punkty'])) echo 'var punkty = '.$_SESSION['punkty']; ?> ;
+            <?php 
+                if (isset($_SESSION['punkty'])) {
+                    echo 'var punkty = '.$_SESSION['punkty'].';'; 
+                    echo 'window.onbeforeunload = function () {';
+                    echo 'return "text"; }';
+                }
+            ?>
         </script>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin-ext" rel="stylesheet">
         <title> ODGADYWANIE HASŁA </title>

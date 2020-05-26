@@ -149,11 +149,10 @@ function sprawdz (nr)
         {
             nieodgadniete();
         }
-        alert ('textr');
     }
 }
 
-window.onbeforeunload = function () {
-    return "Czy napewno chcesz wyjść? ";
-}
-
+/*window.onbeforeunload = function () {
+    console.log('text');
+    return "text";
+}*/
