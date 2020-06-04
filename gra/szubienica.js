@@ -1,7 +1,7 @@
 ﻿//tablica liter
-var litery = new Array(35);
+const litery = [65, 260, 66, 67, 262, 68, 69, 280, 70, 71, 72, 73, 74, 75, 76, 321, 77, 78, 323, 79, 211, 80, 81, 82, 83, 346, 84, 85, 86, 87, 88, 89, 90, 377, 379];
 
-litery[0] = "A";
+/*litery[0] = "A";
 litery[1] = "Ą";
 litery[2] = "B";
 litery[3] = "C";
@@ -35,7 +35,8 @@ litery[30] = "X";
 litery[31] = "Y";
 litery[32] = "Z";
 litery[33] = "Ż";
-litery[34] = "Ź";
+litery[34] = "Ź";*/
+
 
 var haslo;
 var dlugosc;
@@ -63,6 +64,7 @@ function wypisz_haslo()
 
 function start()
 {
+    //console.log(haslo);
     ustaw_haslo();
     wypisz_haslo(); 
     
@@ -71,7 +73,7 @@ function start()
     for (i=0; i<35; i++)
     {
         if (i%7==0) tresc_diva+= '<div style="clear: both;"> </div>'; 
-        tresc_diva += '<div class="litera" onclick=sprawdz(' + i + ') id="lit' + i + '">' + litery[i] + '</div>'; 
+        tresc_diva += '<div class="litera" onclick=sprawdz(' + litery[i] + ') id="lit' + litery[i] + '">' + String.fromCharCode(litery[i]) + '</div>'; // wypisanie pojedyńczej literki do zgadywania
     }
     
     document.getElementById("alfabet").innerHTML = tresc_diva; 
@@ -106,12 +108,14 @@ function nieodgadniete()
 function sprawdz (nr)
 {
     var trafiona = false;
+    var now = String.fromCharCode(nr);
+    //console.log(now);
     
     for (i=0; i<dlugosc; i++)
     {
-         if (haslo.charAt(i)==litery[nr])
+         if (haslo.charAt(i)==now) //porownanie litery w hasle z wybrana litera
          {
-             haslo1 = haslo1.ustawZnak (i, litery[nr]); 
+             haslo1 = haslo1.ustawZnak (i, now); 
              trafiona = true; 
          }
     }
