@@ -21,7 +21,7 @@
                 if (isset($_SESSION['punkty'])) {
                     echo 'var punkty = '.$_SESSION['punkty'].';'; 
                     echo 'window.onbeforeunload = function () {';
-                    echo 'return "text"; }';
+                    echo 'if (koniec==false) return "text"; }';
                 }
             ?>
         </script>
@@ -29,7 +29,7 @@
         <title> ODGADYWANIE HASŁA </title>
     </head>
     
-    <body onload="start();"> 
+    <body onload="start();" onkeydown="button(event)"> 
     <?php 
         include_once "../user/user.php"; 
     ?> 

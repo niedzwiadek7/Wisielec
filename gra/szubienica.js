@@ -1,46 +1,10 @@
 ﻿//tablica liter
 const litery = [65, 260, 66, 67, 262, 68, 69, 280, 70, 71, 72, 73, 74, 75, 76, 321, 77, 78, 323, 79, 211, 80, 81, 82, 83, 346, 84, 85, 86, 87, 88, 89, 90, 377, 379];
 
-/*litery[0] = "A";
-litery[1] = "Ą";
-litery[2] = "B";
-litery[3] = "C";
-litery[4] = "Ć";
-litery[5] = "D";
-litery[6] = "E";
-litery[7] = "Ę";
-litery[8] = "F";
-litery[9] = "G";
-litery[10] = "H";
-litery[11] = "I";
-litery[12] = "J";
-litery[13] = "K";
-litery[14] = "L";
-litery[15] = "Ł";
-litery[16] = "M";
-litery[17] = "N";
-litery[18] = "Ń";
-litery[19] = "O";
-litery[20] = "Ó";
-litery[21] = "P";
-litery[22] = "Q";
-litery[23] = "R";
-litery[24] = "S";
-litery[25] = "Ś";
-litery[26] = "T";
-litery[27] = "U";
-litery[28] = "V";
-litery[29] = "W";
-litery[30] = "X";
-litery[31] = "Y";
-litery[32] = "Z";
-litery[33] = "Ż";
-litery[34] = "Ź";*/
-
-
 var haslo;
 var dlugosc;
 var haslo1 = "";
+var koniec = false; // zmiena zapobiegająca wyświetleniu komikatu po zakończonej grze
 
 function ustaw_haslo()
 {
@@ -88,12 +52,14 @@ String.prototype.ustawZnak = function (miejsce, znak)
 function zgadniete()
 {
     var gdzie = 'punkty.php?skuch=' + ile_skuch;
-    document.getElementById("plansza").innerHTML = gdzie;
+    // document.getElementById("plansza").innerHTML = gdzie;
+    koniec = true;
     przekieruj(gdzie);
 }
 
 function nieodgadniete()
 {
+    koniec = true;
     var zmienna = "";
     for (i=0; i<dlugosc; i++)
         if (haslo1.charAt(i)=="-") zmienna+= '<span style="color: red;">' + haslo.charAt(i) + '</span>'; 
@@ -107,52 +73,63 @@ function nieodgadniete()
 
 function sprawdz (nr)
 {
-    var trafiona = false;
-    var now = String.fromCharCode(nr);
-    //console.log(now);
-    
-    for (i=0; i<dlugosc; i++)
-    {
-         if (haslo.charAt(i)==now) //porownanie litery w hasle z wybrana litera
-         {
-             haslo1 = haslo1.ustawZnak (i, now); 
-             trafiona = true; 
-         }
-    }
-    
-    if (trafiona==true)
-    {
-        yes.play();
-        var element = "lit" + nr; 
-        document.getElementById(element).style.background = "#003300"; 
-        document.getElementById(element).style.color = "#00C000"; 
-        document.getElementById(element).style.border = "3px solid #00C000"; 
-        document.getElementById(element).style.cursor = "default"; 
-        wypisz_haslo(); 
-        
-        if (haslo==haslo1)
+    var element = "lit" + nr;
+    if(!document.getElementById(element).classList.contains("stop")) { // zabezpieczenie przed wpisywaniem niedozwolonych znaków 
+        var trafiona = false;
+        var now = String.fromCharCode(nr);
+        //console.log(now);
+
+        for (i=0; i<dlugosc; i++)
         {
-            zgadniete();
+             if (haslo.charAt(i)==now) //porownanie litery w hasle z wybrana litera
+             {
+                 haslo1 = haslo1.ustawZnak (i, now); 
+                 trafiona = true; 
+             }
+        }
+
+        if (trafiona==true)
+        {
+            document.getElementById(element).classList.add("stop");
+            yes.play();
+            document.getElementById(element).style.background = "#003300"; 
+            document.getElementById(element).style.color = "#00C000"; 
+            document.getElementById(element).style.border = "3px solid #00C000"; 
+            document.getElementById(element).style.cursor = "default"; 
+            wypisz_haslo(); 
+
+            if (haslo==haslo1)
+            {
+                zgadniete();
+            }
+        }
+
+        else
+        {
+            document.getElementById(element).classList.add("stop");
+            no.play(); 
+            document.getElementById(element).style.background = "#330000"; 
+            document.getElementById(element).style.color = "#C00000"; 
+            document.getElementById(element).style.border = "3px solid #C00000"; 
+            document.getElementById(element).style.cursor = "default";
+            document.getElementById(element).setAttribute("onclick", ";");
+
+            ile_skuch++; 
+            document.getElementById("szubienica").innerHTML = '<img src="wisielec/s' + ile_skuch + '.jpg" alt="" /> ';
+
+            if (ile_skuch>=9)
+            {
+                nieodgadniete();
+            }
         }
     }
-    
-    else
-    {
-        no.play(); 
-        var element = "lit" + nr; 
-        document.getElementById(element).style.background = "#330000"; 
-        document.getElementById(element).style.color = "#C00000"; 
-        document.getElementById(element).style.border = "3px solid #C00000"; 
-        document.getElementById(element).style.cursor = "default";
-        document.getElementById(element).setAttribute("onclick", ";");
-        
-        ile_skuch++; 
-        document.getElementById("szubienica").innerHTML = '<img src="wisielec/s' + ile_skuch + '.jpg" alt="" /> ';
-        
-        if (ile_skuch>=9)
-        {
-            nieodgadniete();
-        }
+}
+
+function button(event) {
+    if(document.activeElement.tagName=="BODY") { // zapobiega odgadywaniu hasła podczas logowania użytkownika
+        var znak = event.key.toUpperCase();
+        var pom = znak.charCodeAt();
+        if (String.fromCharCode(pom)==znak) sprawdz(znak.charCodeAt()); // zabezpieczenie przed pomyleniem przez program klawiszy funkcyjnych z literami
     }
 }
 

@@ -1,4 +1,5 @@
-﻿3. Walidacja wpisywanych danych - tylko spacja i znaki w dodawaniu pytania do tablicy (hasło nie może być puste)
+﻿12. Błąd w ostrzeganiu przed opuszczeniem strony - bez wpisania żadnej litery funkcja nie działa (nie podjęcie hasła skutkuje przywróceniem utraconego punktu)
+3. Walidacja wpisywanych danych - tylko spacja i znaki w dodawaniu pytania do tablicy (hasło nie może być puste)
 4. Dodanie panelu admina (pamiętaj o określeniu czy określony użytkownik jest adminem)
 	- nadawanie praw admina innym użytkownikom
 	- odbieranie praw admina (tylko przez superadmina XD)
@@ -22,4 +23,6 @@
 11. Po logowaniu strona powinna wrócić do tej, z której użytkownik sie logował
 2. Dodanie znaczników semantycznych
 1. Uporządkowanie stylów
+    - litery odgadnięte jako osobne klasy pochodne od klasy "litera"
+
 
