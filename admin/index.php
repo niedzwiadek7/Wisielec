@@ -2,6 +2,9 @@
 
 <html lang="pl">
     <head>
+        <?php
+            include_once "../user/head.php";
+        ?>
         <meta charset="utf-8" />
         <title> Panel administracyjny </title>
         <link rel="stylesheet" type="text/css" href="/./style.css" />
@@ -9,7 +12,10 @@
         <script src="/./wymagany.js"> </script> 
     </head>
     
-    <body> 
+    <body>
+        <?php
+            include_once "../user/user.php";
+        ?> 
         <div id="pojemnik">
             <div id="plansza">
                 Panel administracyjny

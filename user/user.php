@@ -1,36 +1,65 @@
 <?php
 
+echo<<<END
+
+    <header> 
+        
+        <nav class="navbar navbar-dark navbar-expand-xl"> 
+             <div> </div>
+             <a class="navbar-brand mr-4" href="#"> <img src="/wisielec/img/logo.png" alt="" width="30" class="d-inline-block mr-1 align-middle"> SZUBIENICA </a>
+             
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji"> 
+             
+                 <span class="navbar-toggler-icon"> </span>
+                                 
+             </button>
+             
+             <div class="collapse navbar-collapse" id="mainmenu">
+                 
+                 <ul class="navbar-nav mr-auto">
+                     
+                     <li class="nav-item dropdown mr-3"> 
+                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true" > Kategorie </a>
+                         
+                         <div class="dropdown-menu" aria-labelledby="submenu">
+                             <div class="dropdown-divider"> </div>
+                             <a class="dropdown-item" href= "#"> Kategoria 1 </a>
+                             <a class="dropdown-item" href= "#"> Kategoria 2 </a>
+                             <a class="dropdown-item" href= "#"> Kategoria 3 </a>
+                             <a class="dropdown-item" href= "#"> Kategoria 4 </a>
+                         </div>
+                     </li>
+                     
+                     <li class="nav-item mr-3"> 
+                         <a href="#" class="nav-link"> Ranking </a> 
+                     </li>
+                     
+                     <li class="nav-item"> 
+                         <a href="#" class="nav-link"> O autorze </a> 
+                     </li>
+                     
+                 </ul>
+END;
+
 	if ((isset($_SESSION['zalogowany'])==true)&&($_SESSION['zalogowany']==true)) 
-	{
-		echo '<div id="konta" style="width: 1000px">';
-		echo '<div id="nazwa">';
-		echo 'Witaj, '.$_SESSION['user'] ;
-		echo '</div>';
-		echo '<div id="punkty">';
-		echo 'Punkty: '.$_SESSION['punkty'] ;
-		echo '</div>';
-                if ($_SESSION['admin']==1) echo '<div class="dostep" onclick="przekieruj(\'admin/index.php\');"> Panel administratora </div>';
-		echo '<div class="dostep" onclick="przekieruj(\'/wisielec/user/logout.php\');"> Wyloguj się </div>';
-		echo '<div style="clear: both;"> </div>';
-		echo '</div>';
-	}
+    {
+        echo '<div>';
+            echo '<span class="mr-4"> Witaj, '.$_SESSION['user'].'</span>';
+            echo '<span class="mr-4"> Punkty: '.$_SESSION['punkty'].'</span>';
+        echo '</div> <div>';
+            if ($_SESSION['admin']==1) echo '<button class="btn btn-dark mr-2 mt-1" type="button" onclick="przekieruj(\'admin/index.php\');"> Panel administratora </button>';
+            echo '<button class="btn btn-dark mt-1" onclick="przekieruj(\'/wisielec/user/logout.php\');"> Wyloguj się </button>';
+        echo '</div>'; 
+    }
 
 	else
-	{
-    		echo '<div id="konta">';
-        	echo '<form action="/wisielec/user/zaloguj.php" method="post">';
-            	echo '<input type="text" placeholder="Login" name="login" class="dostep2" onfocus="this.placeholder=\'\'" onblur="this.placeholder=\'Login\'"/>';
-            	echo '<input type="password" placeholder="Hasło" name="haslo" class="dostep2" onfocus="this.placeholder=\'\'" onblur="this.placeholder=\'Hasło\'"/> ';
-            	echo '<input type="submit" value="Zaloguj się" class="dostep" />';
-        	echo '</form>';
-        	echo '<div class="dostep" onclick="przekieruj(\'/wisielec/user/rejestracja.php\');"> Zarejestruj się </div>';
-        	echo '<div style="clear: both;"> </div>';
-        
-		if (isset($_SESSION['komunikat'])==true)
-		{
-			echo $_SESSION['komunikat'];
-			unset ($_SESSION['komunikat']);
-		}
-   		echo '</div>';
+    {     
+        echo '<form class="form-inline" action="/wisielec/user/zaloguj.php" method="post">';
+        echo '    <input class="form-control mr-1 mt-3 " type="text" placeholder="login" aria-label="login" name="login">';
+        echo '    <input class="form-control mr-1 mt-3" type="password" placeholder="hasło" aria-label="hasło" name="haslo">';
+        echo '    <input type="submit" class="btn btn-dark mr-1 mt-3" value="Zaloguj się"> '; 
+        echo '    <input type="button" class="btn btn-dark mt-3" value="Zarejestruj się" onclick="przekieruj(\'/wisielec/user/rejestracja.php\');">';
+        echo '</form>';
 	}
-    ?>	
+
+    echo "</div></nav></header>";

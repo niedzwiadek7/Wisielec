@@ -4,35 +4,39 @@
 
 <html lang="pl"> 
     <head> 
+        <?php
+            include_once "user/head.php";
+        ?>
         <meta charset = "utf-8" /> 
         <title> Szubienica </title>
-        
         <link rel="stylesheet" href="style.css" type="text/css" /> 
-        <script src="wymagany.js"> </script>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin-ext" rel="stylesheet">
     </head>
     
     <body>
     <?php
-        include_once "user/user.php"; 
-    ?> 
-        
-       <div id="pojemnik">
+        include_once "user/user.php";
+    ?>        
+    <main>
+       
+       <div class="container-fluid">
+           
             <div id="plansza"> 
-                SZUBIENICA
+                Miejsce na hasło :D
             </div>
            
-            <div class="wybor" onclick="przekieruj('gra/gra.php');">
-                <div style="height: 36px;"> </div>
-                 Wylosuj z bazy danych
-                <div style="height: 36px;"> </div>
-            </div>
+            <button class="wybor col-12 mb-3" onclick="przekieruj('gra/gra.php');">
+                <p> Wylosuj z bazy danych </p> 
+            </button>
             
-           <div class="wybor" onclick="przekieruj('gra/dodaj.php');">
-                <div style="height: 36px;"> </div>
+           <button class="wybor col-12" onclick="przekieruj('gra/dodaj.php');">
                     Zagraj z drugim graczem
-                <div style="height: 36px;"> </div>
-           </div>
+           </button>
+           
         </div>
+    </main> 
+        
+    <script src="wymagany.js"> </script>
+    
     </body>
 </html>	

@@ -26,7 +26,7 @@
     margin-left: auto; 
     margin-right: auto;
     width: 100%; 
-    margin-top: 50px; 
+    margin-top: 100px; 
     margin-bottom: 50px; 
     text-align: center;
     font-size: 48px;
@@ -143,19 +143,21 @@ form#dodaj >input#wysylanie:hover
 .wybor
 {
     text-align: center; 
-    min-height: 100px;
-    border: 5px solid lightgray;
-    width: 890px; 
-    margin-bottom: 33px; 
+    min-height: 124px;
+    border: 3px solid lightgray;
     cursor: pointer;
 	border-radius: 15px;
+    background-color: black;
+    color: lightgray;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700; 
 }
             
 .wybor:hover
 {
-    background-color: #05166b; 
-    color: white; 
-    border: 5px solid white; 
+    background-color: yellow; 
+    color: black; 
+    border: 5px solid lightyellow; 
 }
 
 #konta
@@ -193,14 +195,13 @@ form#dodaj >input#wysylanie:hover
 input[type=text], 
 input[type=password]
 {
-	border-radius: 10px;
-    font-size: 28px; 
+	border-radius: 5px;
+    font-size: 15px; 
     font-family: 'Inconsolata', monospace;
     float: left; 
-    padding: 15px; 
+    padding: 10px 5px; 
     background-color: #303030; 
     color: white;
-    margin: 3px 10px;
     border: none; 
 	outline: none;
 }
@@ -329,3 +330,4 @@ input[type=password]:focus
     color: white; 
     background-color: #505050;
 }
+

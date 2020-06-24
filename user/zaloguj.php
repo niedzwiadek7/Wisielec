@@ -14,7 +14,7 @@
     {
         header ('Location: ../index.php');
         exit();
-    }
+    }   
 
     require_once "../baza/db_connect.php";
         

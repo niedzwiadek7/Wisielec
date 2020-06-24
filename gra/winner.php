@@ -6,6 +6,9 @@
 
 <html lang="pl"> 
     <head> 
+        <?php
+            include_once "../user/head.php";
+        ?>
         <meta charset = "utf-8" /> 
         <link rel="stylesheet" href="../style.css" type="text/css" /> 
         <link rel="stylesheet" href="../fontello/css/fontello.css" type="text/css" /> 
@@ -15,8 +18,8 @@
     </head>
     
     <body> 
-        <?php 
-            include_once "../user/user.php"; 
+        <?php
+            include_once "../user/user.php";
         ?>
 
         <div id="plansza"> 

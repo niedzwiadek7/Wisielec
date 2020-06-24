@@ -8,6 +8,9 @@
 
 <html lang="pl"> 
     <head> 
+       <?php
+            include_once "../user/head.php";
+        ?>
         <meta charset = "utf-8" /> 
         <title> Szubienica </title>
 

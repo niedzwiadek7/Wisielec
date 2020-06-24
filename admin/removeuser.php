@@ -1,6 +1,9 @@
 <!DOCTYPE HTML> 
 <html lang="pl">
     <head>
+        <?php
+            include_once "../user/head.php";
+        ?>
         <meta charset="utf-8" /> 
         <title> Usuń administratora </title>
         <link rel="stylesheet" type="text/css" href="/./style.css" />
@@ -9,6 +12,9 @@
     </head>
     
     <body>
+        <?php
+            include_once "../user/user.php";
+        ?>
         <div id="pojemnik">
             <div id="plansza">
                 Usuń administratora

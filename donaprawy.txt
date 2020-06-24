@@ -12,6 +12,7 @@
 7. Hasło jest dostępne w kodzie źródłowym stronym (nooo... nie powinno XD) 
 8.Dodać: 
 - kategorie
+    - dodać listę kategorii do menu głównego 
 - podpowiedzi 
 - hasła dla określonego gracza nie powinny się powtarzać
 9. Wygląd: 
@@ -24,5 +25,8 @@
 2. Dodanie znaczników semantycznych
 1. Uporządkowanie stylów
     - litery odgadnięte jako osobne klasy pochodne od klasy "litera"
+
+13. Podczas wpisywania loginu i hasła pole będzie się podświetlać na czerwono lub zielono w zależności od poprawności wypełnienia pola (javascript)
+    -po wpisaniu danych w logowanie i wybraniu opcji zarejestruj dane użytkownika zostaną zapammiętane
 
 
