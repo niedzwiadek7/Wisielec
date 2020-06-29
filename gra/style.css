@@ -1,0 +1,64 @@
+.litera
+{
+    display: inline-block;
+    width: 45px; 
+    height: 45px; 
+    text-align: center;
+    margin: 5px;
+    border: 3px solid gray; 
+    cursor: pointer; 
+    border-radius: 15px;
+}
+
+.litera:hover
+{
+    background-color: yellow; 
+    color: black; 
+    border: 3px solid lightyellow; 
+}
+
+.reset
+{
+    cursor: pointer; 
+    color: green; 
+    font-size: 48px;
+}
+
+.resetn
+{
+    cursor: pointer; 
+    color: red; 
+    font-size: 48px;
+}
+
+.toindex
+{
+    cursor: pointer; 
+    color: mediumpurple; 
+    font-size: 48px;
+}
+
+.reset:hover, .resetn:hover, .toindex:hover
+{
+    color: yellow; 
+}
+
+@media (max-width: 768px) {
+    #szubienica img {
+        width: 350px;
+    }
+    
+    footer, .miss {
+        font-size: 18px;
+    }
+    
+    .reset, .resetn, .toindex {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 575px) {
+    .h1 {
+         font-size: 2rem;   
+    }
+}

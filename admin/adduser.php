@@ -2,28 +2,36 @@
 <html lang="pl">
     <head>
         <?php
+            session_start();
             include_once "../user/head.php";
+            if (!isset($_SESSION['zalogowany'])) header ('Location: ../'); 
+            else if ($_SESSION['admin']!=1) header ('Location: ../');
         ?>
-        <meta charset="utf-8" /> 
+        <meta charset="utf-8"> 
         <title> Dodaj administratora </title>
-        <link rel="stylesheet" type="text/css" href="/./style.css" />
-        <link rel="stylesheet" type="text/css" href="/./fontello/css/fontello.css" />
-        <script src="/./wymagany.js"> </script>
+        <link rel="stylesheet" type="text/css" href="/wisielec/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="/wisielec/fontello/css/fontello.css">
+        <script src="/wisielec/wymagany.js"> </script>
     </head>
     
     <body>
         <?php
-            include_once "../user/head.php";
+            include_once "../user/user.php";
         ?>
-        <div id="pojemnik">
-            <div id="plansza">
-                Dodaj administratora
-            </div>
-
+        
+        <header>
+            <h1 class="h1 text-center text-uppercase mt-5 mb-2 my-lg-5"> 
+                    Dodaj administratora
+            </h1>
+            
+        </header>
+           
+        <main>
+           <div class="container">
+           
             <?php
-                require_once "../connect.php"; 
-
-                $polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
+                require_once "../baza/db_connect.php";
 
                 if ($polaczenie->connect_errno!=0)
                  echo "Error: ".$polaczenie->connect_errno;
@@ -41,42 +49,39 @@
                                 $id = $wiersz['id']; 
                                 $user = $wiersz['user'];
                                 $email = $wiersz['email'];
+                                
 echo <<<koniec
-                                <div class="rekord">
-                                    <div class="obrazek">
+                                <div class="rekord row mt-2 mt-md-1 m-auto">
+                                    <div class="col-1 fontello mr-2 py-4 py-md-2">
                                         <i class="icon-user-plus"> </i>
                                     </div>
 
-                                    <div class="id">
+                                    <div class="id col-1 mr-2 py-4 py-md-2">
                                         $id
                                     </div>
 
-                                    <div class="nazwa">
+                                    <div class="col-5 col-md-4 mr-3 py-4 py-md-2">
                                         $user
                                     </div>
 
-                                    <div class="mail">
+                                    <div class="col-6 col-sm-5 py-4 py-md-2">
                                         $email
                                     </div>
-                                    
-                                    <div class="button">
-                                        NADAJ PRAWA 
-                                    </div>
-                                    <div style="clear: both;"> </div>
                                 </div>
 koniec;
                             }
-
-                        else echo "Brak użytkowników, których możnaby mianować administratorami"; 
                     }
 
                     $polaczenie->close();
                 }
             ?>
-
-            <div id="footer">
+                   
+                </div>
+            </main>
+            
+            <footer class="text-center mt-2 p-3 p-lg-5">
                 <a href="index.php"> Powrót do menu administratora </a>
-            </div>
-        </div>
+            </footer>
+            
     </body>
 </html>

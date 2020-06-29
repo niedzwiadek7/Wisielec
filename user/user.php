@@ -26,7 +26,8 @@ echo<<<END
                              <a class="dropdown-item" href= "#"> Kategoria 1 </a>
                              <a class="dropdown-item" href= "#"> Kategoria 2 </a>
                              <a class="dropdown-item" href= "#"> Kategoria 3 </a>
-                             <a class="dropdown-item" href= "#"> Kategoria 4 </a>
+                             <div class="dropdown-divider"> </div>
+                             <a class="dropdown-item" href= "#"> Wszystkie kategorie </a>
                          </div>
                      </li>
                      
@@ -43,11 +44,12 @@ END;
 
 	if ((isset($_SESSION['zalogowany'])==true)&&($_SESSION['zalogowany']==true)) 
     {
-        echo '<div>';
+        echo '<div class="my-2 my-lg-0">';
             echo '<span class="mr-4"> Witaj, '.$_SESSION['user'].'</span>';
-            echo '<span class="mr-4"> Punkty: '.$_SESSION['punkty'].'</span>';
+            if ($_SESSION['punkty']>=0) echo '<span id="punkty" class="mr-4 text-success"> Punkty: '.$_SESSION['punkty'].'</span>';
+            else echo '<span id="punkty" class="mr-4 text-danger"> Punkty: '.$_SESSION['punkty'].'</span>';
         echo '</div> <div>';
-            if ($_SESSION['admin']==1) echo '<button class="btn btn-dark mr-2 mt-1" type="button" onclick="przekieruj(\'admin/index.php\');"> Panel administratora </button>';
+            if ($_SESSION['admin']==1) echo '<button class="btn btn-dark mr-2 mt-1" type="button" onclick="przekieruj(\'/wisielec/admin/index.php\');"> Panel administratora </button>';
             echo '<button class="btn btn-dark mt-1" onclick="przekieruj(\'/wisielec/user/logout.php\');"> Wyloguj się </button>';
         echo '</div>'; 
     }
@@ -63,3 +65,8 @@ END;
 	}
 
     echo "</div></nav></header>";
+
+if (isset($_SESSION['komunikat'])) {
+    echo $_SESSION['komunikat']; 
+    unset ($_SESSION['komunikat']);
+}

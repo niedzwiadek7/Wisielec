@@ -66,9 +66,10 @@ function nieodgadniete()
         else zmienna+= '<span style="color: green;">' + haslo.charAt(i) + '</span>'; 
 
     document.getElementById("plansza").innerHTML = zmienna;
-    document.getElementById("alfabet").innerHTML = "Niestety! Nie udało ci się podać prawidłowego hasła <br /> <br />" + '<span class="resetn" onclick="od_nowa();"> JESZCZE RAZ? </span> <br /> <span class="toindex" onclick="przekieruj(\'../index.php\')"> PRZEJDŹ DO MENU </span>';
+    document.getElementById("alfabet").innerHTML = '<div class="miss mt-4 mb-0 mt-lg-0"> Niestety! Nie udało ci się podać prawidłowego hasła </div>' + '<div class="resetn" onclick="od_nowa();"> JESZCZE RAZ? </div> <div class="toindex" onclick="przekieruj(\'../index.php\')"> PRZEJDŹ DO MENU </div>';
     punkty--;
     document.getElementById("punkty").innerHTML = "Punkty: " + punkty;
+    document.getElementById("footer").innerHTML = '';
 }
 
 function sprawdz (nr)

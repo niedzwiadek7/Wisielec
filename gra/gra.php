@@ -1,6 +1,5 @@
 <?php 
     session_start();
-    //test $_SESSION['pytanie'] = "hasło";
     require_once("losuj.php");
 ?>
 
@@ -15,6 +14,7 @@
         <title> Szubienica </title>
 
         <link rel="stylesheet" href="../style.css" type="text/css" /> 
+        <link rel="stylesheet" href="style.css" type="text/css" /> 
         <link rel="stylesheet" href="../fontello/css/fontello.css" type="text/css" /> 
         <script src="szubienica.js"> </script>
         <script src="../wymagany.js"> </script>
@@ -36,28 +36,35 @@
     <?php 
         include_once "../user/user.php"; 
     ?> 
+       
+       <main>
+           <header>
+               <h1 id="plansza" class="h1 text-center text-uppercase mt-5 mb-2 my-lg-5"> 
+                    
+               </h1>
+           </header>
+          
+           <div class="container-fluid">
+                <div class="row">
+                   
+                    <div id="szubienica" class="col-lg-6 text-center">
+                        <img src="wisielec/s0.jpg" alt="" />
+                    </div>
 
-       <div id="plansza"> 
+                    <div id="alfabet" class="col-lg-6 mt-3 text-center">
+
+                    </div>
+               </div>
+            </div>
             
-       </div>
-    
-       <div id="pojemnik">
-            <div id="szubienica">
-                <img src="wisielec/s0.jpg" alt="" />
-            </div>
-
-            <div id="alfabet">
-
-            </div>
-            <div style="clear: both;"> </div>
-
-            <div id="footer">
+            <footer id="footer" class="text-center mt-3 p-3 p-lg-5">
                 <?php
                     if ((isset($_SESSION['zalogowany'])==true)&&($_SESSION['zalogowany']==true)) 
                         echo "Wyjście z gry w trakcie rozrywki będzie równoznaczne z nieodgadnięciem hasła";
                 ?>
-            </div>
-        </div>
+            </footer>
+        </main>
+
     </body>
 </html>			
 

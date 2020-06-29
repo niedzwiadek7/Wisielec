@@ -30,3 +30,5 @@
     -po wpisaniu danych w logowanie i wybraniu opcji zarejestruj dane użytkownika zostaną zapammiętane
 
 
+14. Spis zmiennych lokalnych
+15. Przekierowania php

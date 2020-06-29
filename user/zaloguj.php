@@ -44,11 +44,11 @@
 
                 header('Location: ../index.php');
             }   else {
-                $_SESSION['komunikat'] = '<p style="color: red;"> Nieprawidłowy login lub hasło! </p>';
+                $_SESSION['komunikat'] = '<div class="error"> Nieprawidłowy login lub hasło! </div>';
                 header ('Location: ../index.php');
             }
         }   else {
-            $_SESSION['komunikat'] = '<p style="color: red;"> Nieprawidłowy login lub hasło! </p>';
+            $_SESSION['komunikat'] = '<div class="error"> Nieprawidłowy login lub hasło! </div>';
             header ('Location: ../index.php');
         }
         

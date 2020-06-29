@@ -1,0 +1,13 @@
+.error {
+    color: red;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 300;
+}
+            
+label {
+    font-size: 16px;
+    display: block;
+    text-align: left;
+    margin-bottom: 0;
+}

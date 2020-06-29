@@ -1,0 +1,96 @@
+.opcja
+{
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.opcja:hover
+{
+    background-color: yellow;
+    color: black;
+}
+
+.rekord
+{
+    width: 100%; 
+    font-size: 20px;
+    padding: auto;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.rekord:hover
+{
+    background-color: yellow;
+    color: black;
+}
+
+.rekord button {
+    background-color: black;
+    color: white;
+    display: inline;
+}
+
+.rekord button:hover {
+    color: yellow;    
+}
+
+.rekord .dropdown-menu {
+    background-color: yellow!importnat;  
+    border: none;
+}
+
+.rekord .dropdown-item {
+    background-color: yellow!important;
+    color: black!important;
+    cursor: pointer;
+}
+
+.rekord .dropdown-item:hover {
+    background-color: black!important;
+    color: yellow!important;
+}
+
+.opcja i {
+    font-size: 150px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 18px;
+    }
+    
+    .opcja i {
+        font-size: 100px;
+    }
+    
+    .fontello {
+        display: none;
+    }
+    
+    .rekord {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    .h1 {
+        font-size: 2rem;
+    }
+    
+    .opcja i {
+        font-size: 90px;
+    }
+    
+    .id {
+        display: none;
+    }
+    
+    .rekord {
+        font-size: 16px;
+    }
+}

@@ -14,138 +14,11 @@
     user-select: none;
 }
 
-#pojemnik
-{
-    width: 900px; 
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#plansza
-{
-    margin-left: auto; 
-    margin-right: auto;
-    width: 100%; 
-    margin-top: 100px; 
-    margin-bottom: 50px; 
-    text-align: center;
-    font-size: 48px;
-    min-height: 60px; 
-    text-transform: uppercase;
-}
-
-#szubienica
-{
-    float: left;
-    width: 450px;
-    text-align: center;
-    min-height: 280px; 
-}
-
-#alfabet
-{
-    text-align: center; 
-    width: 450px; 
-    float: left;
-    min-height: 280px; 
-}
-
-.litera
-{
-    width: 30px; 
-    height: 30px; 
-    text-align: center;
-    padding: 5px; 
-    margin: 5px;
-    border: 3px solid gray; 
-    float: left;
-    cursor: pointer; 
-    border-radius: 15px;
-}
-
-.litera:hover
-{
-    background-color: #05166b; 
-    color: white; 
-    border: 3px solid white; 
-}
-
-.reset
-{
-    cursor: pointer; 
-    color: green; 
-    font-size: 48px;
-}
-
-.reset:hover
-{
-    color: white; 
-}
-
-.resetn
-{
-    cursor: pointer; 
-    color: red; 
-    font-size: 48px;
-}
-
-.resetn:hover
-{
-    color: white; 
-}
-
-.toindex
-{
-    cursor: pointer; 
-    color: mediumpurple; 
-    font-size: 48px;
-}
-
-.toindex:hover
-{
-    color: white; 
-}
-
-form#dodaj
-{
-    width: 900px; 
-    text-align: center; 
-}
-            
-form#dodaj > input#zapytanie
-{
-    width: 800px;
-    height: 50px; 
-    font-size: 40px;
-    text-align: center;
-    color: white;
-    background-color: #404040;
-    border: 2px solid #202020; 
-}
-            
-form#dodaj > input#wysylanie
-{
-    width: 200px;
-    height: 50px;
-    font-size: 35px; 
-    color: white;
-    cursor: pointer; 
-    background-color: #404040;
-    border: 2px solid #202020; 
-}
-            
-form#dodaj >input#wysylanie:hover
-{
-    background-color: #606060;
-    border: 2px solid #303030; 
-}
-
 .wybor
 {
     text-align: center; 
     min-height: 124px;
     border: 3px solid lightgray;
-    cursor: pointer;
 	border-radius: 15px;
     background-color: black;
     color: lightgray;
@@ -160,45 +33,11 @@ form#dodaj >input#wysylanie:hover
     border: 5px solid lightyellow; 
 }
 
-#konta
-{ 
-    width: 1200px;
-    margin: 25px auto;
-    text-align: center;
-    display: inline-block;
-}
-
-.dostep
-{
-    font-size: 28px; 
-    display: inline;
-    font-family: 'Inconsolata', monospace;
-    font-weight: 700;
-    float: left; 
-    padding: 15px; 
-    background-color: black;
-    color: lightgray;
-    margin-left: 10px; 
-    margin-right: 10px;
-    border: 3px solid white; 
-    cursor: pointer; 
-	outline: none;
-	border-radius: 10px;
-}
-
-.dostep:hover
-{
-    color: white; 
-    background-color: #05166b; 
-}
-
 input[type=text], 
 input[type=password]
 {
 	border-radius: 5px;
-    font-size: 15px; 
     font-family: 'Inconsolata', monospace;
-    float: left; 
     padding: 10px 5px; 
     background-color: #303030; 
     color: white;
@@ -209,125 +48,18 @@ input[type=password]
 input[type=text]:focus, 
 input[type=password]:focus
 {
-	-webkit-box-shadow: 0px 0px 10px 2px rgba(5,22,107,0.91);
-	-moz-box-shadow: 0px 0px 10px 2px rgba(5,22,107,0.91);
-	box-shadow: 0px 0px 10px 2px rgba(5,22,107,0.91);
-}
-
-
-#nazwa
-{
-	display: inline;
-	float: left; 
-	margin: 10px 15px; 
-	border-right: 2px dotted lightgray;
-	padding: 5px 15px;
-}
-
-#punkty
-{
-	display: inline;
-	float: left; 
-	margin: 10px 15px; 
-	background-color: green; 
-	color: white; 
-	padding: 5px; 
-}
-
-#footer
-{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.opcja
-{
-    width: 430px; 
-    padding: 10px;
-    text-align: center;
-    float: left;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.opcja:hover
-{
-    background-color: #AA0000;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,0,1)!important;
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,0,1)!important;
+    box-shadow: 0px 0px 5px 0px rgba(255,255,0,1)!important;
+    background-color: #303030;
     color: white;
 }
 
-#opcje
-{
-    background-color: #101010; 
-}
-
-.rekord
-{
-    width: 880px; 
-    padding-top: 5px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    height: 35px;
-    font-size: 20px;
-}
-
-.rekord:hover
-{
-    background-color: #AA0000;
+a {
     color: white;
 }
 
-.obrazek
-{
-    width: 70px;
-    text-align: center;
-    font-size: 30px;
-    float: left;
+a:hover {
+    color: yellow;
+    text-decoration: none;
 }
-
-.id
-{
-    padding-top: 5px;
-    float: left;
-    width: 50px; 
-    text-align: center;
-}
-
-.nazwa
-{
-    padding-top: 5px;
-    width: 200px; 
-    text-align: center;
-    float: left;
-}
-
-.mail
-{
-    padding-top: 5px;
-    width: 300px; 
-    text-align: center;
-    float: left;
-}
-
-.button
-{
-    padding-top: 5px;
-    width: 200px;
-    text-align: center;
-    float: left;
-    font-weight: 700;
-    font-size: 20px;
-    padding: 5px;
-    border: 3px solid white; 
-    cursor: pointer;
-}
-
-.button:hover
-{
-    color: white; 
-    background-color: #505050;
-}
-

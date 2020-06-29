@@ -39,3 +39,11 @@ nav {
 .dropdown-divider {
     margin-top: 0.66rem;
 }
+
+.error {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 4px;
+    margin-bottom: 0;
+}

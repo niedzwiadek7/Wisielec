@@ -19,13 +19,13 @@
     ?>        
     <main>
        
-       <div class="container-fluid">
+       <div class="container">
            
-            <div id="plansza"> 
+            <div class="h1 text-center my-5"> 
                 Miejsce na hasło :D
             </div>
            
-            <button class="wybor col-12 mb-3" onclick="przekieruj('gra/gra.php');">
+            <button class="wybor col-12 mb-3 mt-lg-5" onclick="przekieruj('gra/gra.php');">
                 <p> Wylosuj z bazy danych </p> 
             </button>
             
