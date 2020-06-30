@@ -44,7 +44,7 @@
                </h1>
            </header>
           
-           <div class="container-fluid">
+           <div class="container">
                 <div class="row">
                    
                     <div id="szubienica" class="col-lg-6 text-center">

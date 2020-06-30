@@ -8,6 +8,7 @@
     border: 3px solid gray; 
     cursor: pointer; 
     border-radius: 15px;
+    transition: all .2s ease;
 }
 
 .litera:hover
@@ -15,6 +16,29 @@
     background-color: yellow; 
     color: black; 
     border: 3px solid lightyellow; 
+    transform: scale(1.1);
+}
+
+.pos {
+    background-color: #003300!important;
+    color: #00C000!important;
+    border: 3px solid #00C000!important;
+    cursor: default!important;
+}
+
+.pos:hover {
+    transform: none!important;
+}
+
+.neg {
+    background-color: #330000!important;
+    color: #C00000!important;
+    border: 3px solid #C00000!important;
+    cursor: default!important;
+}
+
+.neg:hover {
+    transform: none!important;
 }
 
 .reset
@@ -22,6 +46,7 @@
     cursor: pointer; 
     color: green; 
     font-size: 48px;
+    transition: transform .25s ease-in-out;
 }
 
 .resetn
@@ -29,6 +54,7 @@
     cursor: pointer; 
     color: red; 
     font-size: 48px;
+    transition: transform .25s ease-in-out;
 }
 
 .toindex
@@ -36,11 +62,15 @@
     cursor: pointer; 
     color: mediumpurple; 
     font-size: 48px;
+    transition: transform .25s ease-in-out;
 }
 
 .reset:hover, .resetn:hover, .toindex:hover
 {
     color: yellow; 
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 @media (max-width: 768px) {

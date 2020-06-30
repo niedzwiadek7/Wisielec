@@ -4,6 +4,8 @@ nav {
     border-bottom: 5px solid white;
     min-height: 92px;
     padding-bottom: 0rem;
+    position: sticky;
+    top: 0px;
 }
 
 .nav-link:focus, .dropdown-item:focus {

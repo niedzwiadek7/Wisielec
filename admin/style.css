@@ -5,12 +5,17 @@
     cursor: pointer;
     border-radius: 5px;
     font-size: 20px;
+    transition: all .2s ease;
 }
 
 .opcja:hover
 {
     background-color: yellow;
     color: black;
+}
+
+.opcja i {
+    font-size: 150px;
 }
 
 .rekord
@@ -21,6 +26,7 @@
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
+    transition: all .2s ease;
 }
 
 .rekord:hover
@@ -48,15 +54,12 @@
     background-color: yellow!important;
     color: black!important;
     cursor: pointer;
+    transition: all .2s ease;
 }
 
 .rekord .dropdown-item:hover {
     background-color: black!important;
     color: yellow!important;
-}
-
-.opcja i {
-    font-size: 150px;
 }
 
 @media (max-width: 768px) {

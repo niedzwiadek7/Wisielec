@@ -32,3 +32,9 @@
 
 14. Spis zmiennych lokalnych
 15. Przekierowania php
+
+Naprawy: 
+1. Rejestracja bez zmiennych sesyjnych
+2. Gdy ustawione jest hasło, użytkownik może z buta przenieść się do winner.php
+3. Pogoda na wisielcu jest z pogodą odpowiadającą w danej miejscowości 
+4. 1200 px podczas zalogowania admina zlewanie layoutu 

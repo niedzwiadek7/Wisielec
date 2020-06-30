@@ -12,6 +12,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    position: relative;
 }
 
 .wybor
@@ -24,6 +25,7 @@
     color: lightgray;
     font-family: 'Inconsolata', monospace;
     font-weight: 700; 
+    transition: all .25s ease; 
 }
             
 .wybor:hover

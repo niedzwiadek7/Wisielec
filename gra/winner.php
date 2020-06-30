@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    if (!isset($_SESSION['pytanie'])) header('Location: ../')
+    if (!isset($_SESSION['pytanie'])) header('Location: ../');
 ?>
 
 <!DOCTYPE HTML> 
@@ -10,10 +10,10 @@
         <?php
             include_once "../user/head.php";
         ?>
-        <meta charset = "utf-8" /> 
-        <link rel="stylesheet" href="../style.css" type="text/css" /> 
-        <link rel="stylesheet" href="style.css" type="text/css" /> 
-        <link rel="stylesheet" href="../fontello/css/fontello.css" type="text/css" /> 
+        <meta charset = "utf-8"> 
+        <link rel="stylesheet" href="../style.css" type="text/css"> 
+        <link rel="stylesheet" href="style.css" type="text/css"> 
+        <link rel="stylesheet" href="../fontello/css/fontello.css" type="text/css"> 
         <script src="../wymagany.js"> </script>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin-ext" rel="stylesheet">
         <title> GRATULACJE :) </title>
@@ -34,7 +34,7 @@
                </h1>
            </header>
           
-           <div class="container-fluid">
+           <div class="container">
                 <div class="row">
                    
                     <div id="szubienica" class="col-lg-6 text-center">

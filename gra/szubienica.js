@@ -93,10 +93,7 @@ function sprawdz (nr)
         {
             document.getElementById(element).classList.add("stop");
             yes.play();
-            document.getElementById(element).style.background = "#003300"; 
-            document.getElementById(element).style.color = "#00C000"; 
-            document.getElementById(element).style.border = "3px solid #00C000"; 
-            document.getElementById(element).style.cursor = "default"; 
+            document.getElementById(element).classList.add("pos");
             wypisz_haslo(); 
 
             if (haslo==haslo1)
@@ -109,11 +106,7 @@ function sprawdz (nr)
         {
             document.getElementById(element).classList.add("stop");
             no.play(); 
-            document.getElementById(element).style.background = "#330000"; 
-            document.getElementById(element).style.color = "#C00000"; 
-            document.getElementById(element).style.border = "3px solid #C00000"; 
-            document.getElementById(element).style.cursor = "default";
-            document.getElementById(element).setAttribute("onclick", ";");
+            document.getElementById(element).classList.add("neg");
 
             ile_skuch++; 
             document.getElementById("szubienica").innerHTML = '<img src="wisielec/s' + ile_skuch + '.jpg" alt="" /> ';
